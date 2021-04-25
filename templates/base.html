@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Base File</title>
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+	<link rel="stylesheet" type="{% static 'text/css' %}" href="css/mobile.css">
+	<script src="js/mobile.js" type="{% static 'text/javascript' %}"></script>
+</head>
+<body>
+  {% block content %}
+
+  {% endblock %}
+</body>
+</html>
