@@ -13,7 +13,8 @@ function navHighlighter() {
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute("id");
+
+    let sectionId = current.getAttribute("id");
 
     /*
     - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
@@ -24,8 +25,10 @@ function navHighlighter() {
       scrollY <= sectionTop + sectionHeight
     ){
       document.querySelector(".navigation a[href*=" + sectionId + "]").classList.add("active");
+            window.location.hash = "#"+sectionId+'/';
     } else {
       document.querySelector(".navigation a[href*=" + sectionId + "]").classList.remove("active");
     }
+
   });
 }
