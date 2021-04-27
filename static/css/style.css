@@ -13,6 +13,19 @@ body {
   box-sizing: border-box;
 }
 
+.container {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "Quicksand", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
 .side-bar {
   width: 160px;
   height: 100vh;
@@ -21,6 +34,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 nav ul {
@@ -72,7 +86,7 @@ h1 {
 
 .active {
   color: #2c98f0;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 img.avatar {

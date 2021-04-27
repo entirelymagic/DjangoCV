@@ -25,7 +25,9 @@ function navHighlighter() {
       scrollY <= sectionTop + sectionHeight
     ){
       document.querySelector(".navigation a[href*=" + sectionId + "]").classList.add("active");
-            window.location.hash = "#"+sectionId+'/';
+      // Change the location hash accordingly with the section currently scrolled.
+      // There is an extra '/' in order to avoid the conflict with the current location hash.
+      window.location.hash = "#"+sectionId+'/';
     } else {
       document.querySelector(".navigation a[href*=" + sectionId + "]").classList.remove("active");
     }
